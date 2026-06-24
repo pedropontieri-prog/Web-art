@@ -6,7 +6,6 @@ let porta = document.getElementById("porta");
 let frente = document.getElementById("frente");
 let imagem = document.getElementById("imagem");
 
-// carrega JSON
 fetch("dados.json")
   .then(res => res.json())
   .then(data => {
