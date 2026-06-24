@@ -1,0 +1,82 @@
+body{
+margin:0;
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+background:radial-gradient(circle,#0f172a,#000);
+font-family:Arial;
+overflow:hidden;
+}
+
+h1{
+position:absolute;
+top:40px;
+width:100%;
+text-align:center;
+color:white;
+letter-spacing:3px;
+text-shadow:0 0 20px cyan;
+font-size:20px;
+padding:0 10px;
+}
+
+.porta-container{
+perspective:1400px;
+}
+
+.porta{
+width:240px;
+height:400px;
+position:relative;
+cursor:pointer;
+}
+
+.imagem{
+position:absolute;
+width:240px;
+height:400px;
+background-size:cover;
+background-position:center;
+border-radius:12px;
+box-shadow:0 0 70px rgba(0,255,255,0.6);
+}
+
+.frente{
+position:absolute;
+width:240px;
+height:400px;
+background:linear-gradient(90deg,#3b1b08,#8b5a2b,#4a240d);
+border:10px solid #d4af37;
+border-radius:12px;
+transform-origin:left;
+transition:1.5s;
+box-shadow:inset 0 0 40px black;
+z-index:2;
+}
+
+.frente::before{
+content:"";
+position:absolute;
+width:100px;
+height:100px;
+border:3px solid #d4af37;
+top:120px;
+left:70px;
+}
+
+.frente::after{
+content:"";
+position:absolute;
+width:18px;
+height:18px;
+background:gold;
+border-radius:50%;
+right:25px;
+top:200px;
+box-shadow:0 0 15px yellow;
+}
+
+.abrir{
+transform:rotateY(-115deg);
+}
